@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+	<package name="worker" namespace="/" extends="struts-default">
+		<action name="*TestAction" class="testAction" method="{1}">
+			<result name="success" type="dispatcher">
+				/success.jsp
+			</result>
+			<result name="false" type="dispatcher">/false.jsp</result></action>
+			
+			
+			</package>
+			
+			</struts>    
