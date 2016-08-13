@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/public.css" type="text/css" rel="stylesheet">
+    <link href="css/totalStyle.css" type="text/css" rel="stylesheet">
+    <link href="css/smartMenu.css" type="text/css" rel="stylesheet">
+    <title>机房巡检管理系统-系统管理员</title>
+</head>
+
+<body onload="startTime()">
+
+    <div id="admin">
+        <!-- 左侧菜单部分-->
+        <div class="ad-menu" id="ad-menu">
+            <div class="ad-logo">
+                <img src="image/top_logo.png" height="63" width="68">
+                <br/>
+                <div>
+                    <label style="color: white;font-size: 1.0em;">
+                        机房巡检管理系统
+                        <br/>
+                        Computer Room Inspection Manage System
+                    </label>
+                </div>
+            </div>
+
+            <div class="ad-list">
+                <ul>
+                    <!-- 首页 -->
+                    <li>
+                        <div class="li-item"> <em class="scm li-ico ic1"></em>
+                            首页
+                            <span class="scm arrow"></span>
+                        </div>
+                        <dl>
+                            <dd>
+                                <a href="#" class="dd-item">
+                                    首页
+                                    <span class="scm dd-ar"></span>
+                                </a>
+                                <ul class="ad-item-list">
+                                    <li class="J_menuItem" href="index_v1.html" data-index="1">首页</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </li>
+
+                    <!-- 用户管理 -->
+                    <li>
+                        <div class="li-item"> <em class="scm li-ico ic2"></em>
+                            用户管理
+                            <span class="scm arrow"></span>
+                        </div>
+
+                        <dl>
+                            <dd>
+                                <a href="user_add.html" class="dd-item" target="main-iframe">
+                                    添加用户
+                                    <span class="scm dd-ar"></span>
+                                </a>
+                                <ul class="ad-item-list"></ul>
+                            </dd>
+                            <dd>
+                                <a href="user_find.html" class="dd-item" target="main-iframe">
+                                    查询用户
+                                    <span class="scm dd-ar"></span>
+                                </a>
+                                <ul class="ad-item-list"></ul>
+                            </dd>
+                        </dl>
+                    </li>
+
+                    <!-- 机房管理 -->
+                    <li>
+                        <div class="li-item">
+                            <em class="scm li-ico ic3"></em>
+                            机房管理
+                            <span class="scm arrow"></span>
+                        </div>
+
+                        <dl>
+                            <dd>
+                                <a href="computerroom_add.html" class="dd-item" target="main-iframe">
+                                    添加机房
+                                    <span class="scm dd-ar"></span>
+                                </a>
+                                <ul class="ad-item-list"></ul>
+                            </dd>
+                            <dd>
+                                <a href="computerroom_find.html" class="dd-item" target="main-iframe">
+                                    查询机房信息
+                                    <span class="scm dd-ar"></span>
+                                </a>
+                                <ul class="ad-item-list"></ul>
+                            </dd>
+                        </dl>
+                    </li>
+
+                    <!-- 设备管理 -->
+                    <li>
+                        <div class="li-item">
+                            <em class="scm li-ico ic4"></em>
+                            设备管理
+                            <span class="scm arrow"></span>
+                        </div>
+
+                        <dl>
+                            <dd>
+                                <a href="device_add.html" class="dd-item" target="main-iframe">
+                                    添加设备
+                                    <span class="scm dd-ar"></span>
+                                </a>
+                                <ul class="ad-item-list"></ul>
+                            </dd>
+                            <dd>
+                                <a href="device_find.html" class="dd-item" target="main-iframe">
+                                    查询设备信息
+                                    <span class="scm dd-ar"></span>
+                                </a>
+                                <ul class="ad-item-list"></ul>
+                            </dd>
+                        </dl>
+                    </li>
+
+                    <!-- 任务管理 -->
+                    <li>
+                        <div class="li-item">
+                            <em class="scm li-ico ic5"></em>
+                            任务管理
+                            <span class="scm arrow"></span>
+                        </div>
+
+                        <dl>
+                            <dd>
+                                <a href="task_add.html" class="dd-item" target="main-iframe">
+                                    发布任务
+                                    <span class="scm dd-ar"></span>
+                                </a>
+                                <ul class="ad-item-list"></ul>
+                            </dd>
+
+                            <dd>
+                                <a href="task_undo.html" class="dd-item" target="main-iframe">
+                                    查看未完成任务
+                                    <span class="scm dd-ar"></span>
+                                </a>
+                                <ul class="ad-item-list"></ul>
+                            </dd>
+
+                            <dd>
+                                <a href="task_history.html" class="dd-item" target="main-iframe">
+                                    查询历史任务
+                                    <span class="scm dd-ar"></span>
+                                </a>
+                                <ul class="ad-item-list"></ul>
+                            </dd>
+                        </dl>
+                    </li>
+
+                    <!-- 巡检管理 -->
+                    <li>
+                        <div class="li-item">
+                            <em class="scm li-ico ic6"></em>
+                            异常报告
+                            <span class="scm arrow"></span>
+                        </div>
+
+                        <dl>
+                            <dd>
+                                <a href="comAdmin_inventorywarning.html" class="dd-item" target="main-iframe">
+                                    异常报告
+                                    <span class="scm dd-ar"></span>
+                                </a>
+                                <ul class="ad-item-list"></ul>
+                            </dd>
+                        </dl>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <!-- 右侧内容部分-->
+        <div class="ad-comment-box" id="ad-comment">
+            <div class="ad-top-comment">
+                <div class="ad-message">
+                    <!-- 右侧左上角的搜索-->
+                    <div class="ad-top-left">
+                        <div class="ad-change-btn">
+                            <a id="ad-list" href="javascript:;" class="scm ad-list-btn"></a>
+                        </div>
+                        <div class="ad-search-box clear">
+                            <div class="ad-search-sel">
+                                <select>
+                                    <option></option>
+                                    <option></option>
+                                    <option></option>
+                                    <option></option>
+                                    <option></option>
+                                </select>
+                            </div>
+                            <div class="ad-search-cha">
+                                <input type="text" class="ad-search-input" placeholder="请输入你要查找的内容">
+                                <input type="submit" class="scm ad-search-btn" value=""></div>
+                        </div>
+                    </div>
+                    <!-- 右侧右上角的通知及当前用户及时间-->
+                    <div class="ad-top-right">
+                        <div class="ad-notice">
+                            <ul>
+                                <li>
+                                    <a href="javascript:;" class="scm nt1">
+                                        <span class="scm nt-count dot">6</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="scm nt2">
+                                        <span class="scm nt-count dot">6</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="scm nt3">
+                                        <span class="scm nt-count dot">6</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ad-welcom">
+                            <div class="ad-wel-img">
+                                <img src="image/top_logo.png" height="36" width="36"></div>
+                            <div class="ad-wel-text">
+                                <div class="font-wel">
+                                    欢迎您！ <strong>沈小0</strong>
+                                    <a href="javascript:;"> <strong>【退出】</strong>
+                                    </a>
+                                </div>
+                                <div id="setDateTime"></div>
+                                <script>
+                                        function startTime(){
+                                            var today=new Date();
+                                            var y=today.getFullYear();
+                                            var mon=today.getMonth();
+                                            var d=today.getDay();
+                                            var h=today.getHours();
+                                            var m=today.getMinutes();
+
+                                            var s=today.getSeconds();
+                                            m=checkTime(m);
+                                            s=checkTime(s);
+
+                                            document.getElementById("setDateTime").innerHTML="现在时间："+h+":"+m+":"+s;
+
+                                            t=setTimeout(function(){startTime();},1000);
+                                            //document.write(today);
+                                        };
+
+                                        function checkTime(i){
+                                            if(i<10) {
+                                                i="0"+i;
+                                            }
+                                            return i;
+                                        };
+                                    </script></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ad-main-nav-box">
+                    <ul id="breadcrumbs-three">
+                        <li title="首页">
+                            <a href="javascript:;" class="dot">首页</a>
+                        </li>
+                    </ul>
+                    <a href="javascript:;" class="scm jian-a J_mainLeft main-sel pre"></a>
+                    <div class="ad-main-wraper .J_menuItems">
+                        <ul class="ad-main-list" id="ad-main"></ul>
+                    </div>
+                    <a href="javascript:;" class="scm jian-a J_mainRight next"></a>
+                </div>
+                <div class="ad-sub-nav-box content-tabs">
+                    <!-- <div class="ad-sub-record">历史记录</div>
+                -->
+                <a href="javascript:;" class="scm jian-a sub-sel pre j_tabBg J_tabLeft"></a>
+                <div class="ad-sub-wraper page-tabs J_menuTabs">
+                    <!--<ul class="ad-sub-list page-tabs-content">
+                    -->
+                    <!--<li class="active J_menuTab" data-id="index_v0.html">首页</li>
+                -->
+                <!--</ul>--></div>
+            <a href="javascript:;" class="scm jian-a next j_tabBg J_tabRight"></a>
+        </div>
+    </div>
+
+    <div class="ad-main-comment J_mainContent" id="ad-iframe">
+        <iframe   name="main-iframe" width="100%" height="100%" src=" " frameborder="0"  seamless></iframe>
+    </div>
+
+    </div>
+</div>
+
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/contabs.js"></script>
+<script type="text/javascript" src="js/maintabs.js"></script>
+<script type="text/javascript" src="js/jquery-smartMenu-min.js"></script>
+<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
+<script type="text/javascript" src="js/setDateTime.js"></script>
+<script type="text/javascript">
+            $(function(){
+                $(".ad-menu").niceScroll({cursorborder:"0 none",cursorcolor:"#1a1a19",cursoropacitymin:"0",boxzoom:false});
+            })
+        </script>
+</body>
+</html>

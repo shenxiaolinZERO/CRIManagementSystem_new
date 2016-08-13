@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/jquery.dataTables.css" type="text/css">
+		<link rel="stylesheet" href="css/addDevice.css" />
+		
+		<title>添加设备</title>
+
+	</head>
+
+	<body>
+		<div class="add_top">
+			<div class="add_top_right">
+				<input type="button" value="导入"  />
+
+			</div>
+		</div>
+		<br>
+		<br />
+		<br />
+		<div id="add_device" align="center">
+			<form id="adddevice" action="method">
+				<table width="80%" border="0" style="" cellpadding="1">
+					<tr>
+						<td width="14%">
+							<div align="left">
+								<p>&nbsp;</p>
+								<p>设备编号： </p>
+								<p>&nbsp;</p>
+							</div>
+						</td>
+						<td width="19%"><input type="text" name="dev_id" id="dev_id"></td>
+						<td width="14%">
+							<div align="left">设备名称：</div>
+						</td>
+						<td width="19%"><input type="text" name="dev_name" id="dev_name"></td>
+						<td width="14%">
+							<div align="left">机房编号：</div>
+						</td>
+						<td width="20%"><input type="text" name="Cr_id" id="Cr_id"></td>
+					</tr>
+					<tr>
+						<td>
+							<div align="left">
+								<p>&nbsp;</p>
+								<p>所属业务系统：</p>
+								<p>&nbsp;</p>
+							</div>
+						</td>
+						<td><input type="text" name="dev_businesssys" id="dev_businesssys"></td>
+						<td>
+							<div align="left">机柜起始U：</div>
+						</td>
+						<td><input type="text" name="dev_cabbegin" id="dev_cabbegin"></td>
+						<td>
+							<div align="left">所占U数：</div>
+						</td>
+						<td><input type="text" name="dev_caboccupy" id="dev_caboccupy"></td>
+					</tr>
+					<tr>
+						<td>
+							<div align="left">
+								<p>&nbsp;</p>
+								<p>品牌：</p>
+								<p>&nbsp;</p>
+							</div>
+						</td>
+						<td><input type="text" name="dev_brandname" id="dev_brandname"></td>
+						<td>
+							<div align="left">型号：</div>
+						</td>
+						<td><input type="text" name="dev_modelnum" id="dev_modelnum"></td>
+						<td>
+							<div align="left">产品 号： </div>
+						</td>
+						<td><input type="text" name="dev_productnum" id="dev_productnum"></td>
+					</tr>
+					<tr>
+						<td>
+							<div align="left">
+								<p>&nbsp;</p>
+								<p>固定资产编号：</p>
+								<p>&nbsp;</p>
+							</div>
+						</td>
+						<td><input type="text" name="dev_fixassetnum" id="dev_fixassetnum"></td>
+						<td>
+							<div align="left">服务开始时间：</div>
+						</td>
+						<td><input type="text" name="dev_serbegintime" id="dev_serbegintime"></td>
+						<td>
+							<div align="left">服务结束时间：</div>
+						</td>
+						<td><input type="text" name="dev_serendtime" id="dev_serendtime"></td>
+					</tr>
+					<tr>
+						<td>
+							<div align="left">
+								<p>&nbsp;</p>
+								<p>服务提供商：</p>
+								<p>&nbsp;</p>
+							</div>
+						</td>
+						<td><input type="text" name="dev_serprovider" id="dev_serprovider"></td>
+						<td>
+							<div align="left">状态：</div>
+						</td>
+						<td><input type="radio" name="dev_state" id="radio" value="radio" checked="checked"> 正常
+							<input type="radio" name="dev_state" id="radio2" value="radio2"> 异常
+							<label for="dev_state"> </label></td>
+						<td>
+							<div align="left">是否有效：</div>
+						</td>
+						<td><input type="radio" name="dev_is valid" id="radio3" value="radio" checked="checked"> 是
+							<input type="radio" name="dev_is valid" id="radio4" value="radio2"> 否
+							<label for="radio3"></label></td>
+					</tr>
+					<tr>
+						<td>
+							<div align="left">
+								<p>&nbsp;</p>
+								<p>用途：</p>
+								<p>&nbsp;</p>
+							</div>
+						</td>
+						<td colspan="5"><textarea name="dev_purpose" id="dev_purpose"></textarea></td>
+					</tr>
+				</table>
+				<p>
+					<input type="submit" value="提交" class="button" />
+					<input type="reset" value="重置" class="button" />
+			</form>
+		</div>
+
+		<br/>
+
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.dataTables.js"></script>
+		<script type="text/javascript" src="js/Encapsulated-Data/public.js"></script>
+		<script type="text/javascript" src="js/Encapsulated-Data/comAdmin_inventorywarning.js"></script>
+		<script type="text/javascript">
+			< /body> < /
+			html >
