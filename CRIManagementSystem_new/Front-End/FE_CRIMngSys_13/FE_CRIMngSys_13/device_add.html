@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <title>添加设备</title>
+</head>
+<body>
+<div >
+    <form class="form-horizontal" role="form" >
+        <legend class="title">请输入设备信息</legend>
+        <div class="form-group">
+        <label for="devId" class="col-sm-2 control-label">设备编号：</label>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" id="devId" name="devId"
+                   placeholder="请输入设备编号">
+          </div>
+        </div>
+        <div class="form-group">
+            <label for="devName" class="col-sm-2 control-label">设备名称：</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="devName" name="devName"
+                       placeholder="请输入设备名称">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="crId" class="col-sm-2 control-label">机房编号：</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="crId" name="crId"
+                       placeholder="请输入机房编号">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="devCabbegin" class="col-sm-2 control-label">机柜起始U：</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="devCabbegin" name="devCabbegin"
+                       placeholder="请输入机柜起始U">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="devCaboccupy" class="col-sm-2 control-label">所占U数：</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="devCaboccupy" name="devCaboccupy"
+                       placeholder="请输入所占U数">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="devBrandname" class="col-sm-2 control-label">品牌：</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="devBrandname" name="devBrandname"
+                       placeholder="请输入品牌">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="devModelnum" class="col-sm-2 control-label">型号：</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="devModelnum" name="devModelnum"
+                       placeholder="请输入型号">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="devProductnum" class="col-sm-2 control-label">产品号：</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="devProductnum" name="devProductnum"
+                       placeholder="请输入产品号">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label  class="col-sm-2 control-label">状态：</label>
+            <div class="col-sm-2">
+                <input type="radio" value="male" id="devStatus1" name="devStatus" checked="checked" ><label for="devStatus1">正常</label>
+                <input type="radio" value="female" id="devStatus2" name="devStatus" style="margin-left: 30px;"><label for="devStatus2">异常</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label  class="col-sm-2 control-label">是否有效：</label>
+            <div class="col-sm-2">
+                <input type="radio" value="male" id="devIsvaild1" name="devIsvaild" checked="checked" ><label for="devIsvaild1">是</label>
+                <input type="radio" value="female" id="devIsvaild2" name="devIsvaild" style="margin-left: 30px;"><label for="devIsvaild2">否</label>
+            </div>
+        </div>
+
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn">保存信息</button>
+                    <button type="submit" class="btn btn">取消</button>
+
+                    <!--<button type="submit" class="btn btn-success">保存信息</button>-->
+                    <!--<button type="submit" class="btn btn-warning">取消</button>-->
+                </div>
+            </div>
+
+    </form>
+</div>
+    <script type="text/javascript" src="js/refjs/jquery-2.1.4.min.js"></script>
+
+</body>
+</html>
