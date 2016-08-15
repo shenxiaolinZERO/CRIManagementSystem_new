@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="easyui/jquery.min.js"></script>
+
+		<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
+
+		<script type="text/javascript" src="easyui/locale/easyui-lang-zh_CN.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css" />
+		<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css" />
+
+		<title>查询机房</title>
+	</head>
+
+	<body>
+			<div class="easyui-panel" title="查询机房" icon="icon-save" style="width: 1250px; height: 420px; margin: 0; padding: 0;">
+				<!-- collapsible="true" minimizable="true" maximizable=true closable="true"-->
+
+				<div class="easyui-layout" fit="true">
+					<div id="easyui_toolbar" region="north" border="false" style="border-bottom: 1px solid #ddd; height: 50px; margin-top:0;  padding: 10px; background: #fafafa;">
+
+						<div id="dev_id" style="float: left;">
+
+							机房编号：
+							<input type="text" name="dev_id" />
+						</div>
+						<div id="dev_name" style="float: left;">
+
+							机房名称：
+							<input type="text" name="dev_name" />
+						</div>
+
+
+						<div id="tb">
+
+							<a href="#" class="easyui-linkbutton" iconCls="icon-cut" plain="true" onclick="javascript:alert('确认删除？')" style="float: right;">删除</a>
+							<input type="button" value="修改" class="btn" style="float: right;" />
+					</div>
+				   <table id="dg" class="easyui-datagrid" title="机房详情" style="width:1250px;height:250px" data-options="rownumbers:true,singleSelect:true,pagination:true,url:''">
+					   <thead>
+					   <tr>
+						  <th data-options="field:'crId',width:80">机房编号</th>
+						  <th data-options="field:'crName',width:100">机房名称</th>
+						  <th data-options="field:'AId',width:80">所属区域</th>
+						  <th data-options="field:'crAddr',width:80">机房地址</th>
+						  <th data-options="field:'crCtname',width:80">机房联系人</th>
+						  <th data-options="field:'crCttel',width:80">联系人手机</th>
+						  <th data-options="field:'crStatus',width:160">联系人邮箱</th>
+						  <th data-options="field:'UTel',width:120">是否有效</th>
+					  </tr>
+					  </thead>
+				     </table>
+			</div>
+			<script type="text/javascript">
+				$(function() {
+					var pager = $('#dg').datagrid('getPager'); // get the pager of datagrid
+					pager.pagination({
+						buttons: [
+							//			{
+							//						iconCls: 'icon-search',
+							//						handler: function() {
+							//							alert('search');
+							//						}
+							//					},
+							{
+								iconCls: 'icon-cut',
+								handler: function() {
+									alert('确定删除？');
+								}
+							}, {
+								iconCls: 'icon-edit',
+								handler: function() {
+									alert('edit');
+								}
+							}
+						]
+					});
+				})
+			</script>
+	</body>
+</html>
