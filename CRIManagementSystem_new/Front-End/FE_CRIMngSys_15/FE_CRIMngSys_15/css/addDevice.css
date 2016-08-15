@@ -1,0 +1,15 @@
+/*.add_top{
+    float:left;
+    width:235px;
+    background-color:#494642;
+    height:100%;
+    overflow-y:auto;
+}*/
+.add_top_right{
+	float: right;
+	margin-right: 100px;
+	
+}
+#adddevice{
+	/*padding: 0px;*/
+}

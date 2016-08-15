@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <title>添加机房</title>
+</head>
+<body>
+    <form class="form-horizontal" role="form">
+        <legend class="title">请输入机房信息</legend>
+
+        <div class="form-group">
+            <label for="crName" class="col-sm-2 control-label">机房名称：</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="crName"
+                       placeholder="请输入机房名称">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label  class="col-sm-2 control-label">所属区域：</label>
+            <div class="col-sm-2">
+               <select style="width: 70px" id="AId">
+                   <option value="0" name="0">请选择</option>
+                   <option value="11" name="11">福州</option>
+                   <option value="12" name="12">厦门</option>
+                   <option value="13" name="12">漳州</option>
+                   <option value="14" name="14">宁德</option>
+                   <option value="15" name="15">三明</option>
+                   <option value="16" name="16">莆田</option>
+                   <option value="17" name="17">泉州</option>
+                   <option value="18" name="18">龙岩</option>
+                   <option value="19" name="19">南平</option>
+               </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="crAddr" class="col-sm-2 control-label">机房地址：</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="crAddr"
+                       placeholder="请输入机房地址">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="crCtname" class="col-sm-2 control-label">机房联系人：</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="crCtname"
+                       placeholder="请输入机房联系人">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="crCttel" class="col-sm-2 control-label">联系人手机：</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="crCttel"
+                       placeholder="请输入联系人手机">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="crCtemall" class="col-sm-2 control-label">联系人邮箱：</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="crCtemall"
+                       placeholder="请输入Email">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label  class="col-sm-2 control-label">是否有效：</label>
+            <div class="col-sm-2">
+                <input type="radio" value="male" id="crStatus1" name="crStatus" checked="checked" ><label for="crStatus1">是</label>
+                <input type="radio" value="female" id="crStatus2" name="crStatus" style="margin-left: 30px;"><label for="crStatus2">否</label>
+            </div>
+        </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-success">保存信息</button>
+                    <button type="submit" class="btn btn-warning">取消</button>
+                </div>
+            </div>
+            </div>
+    </form>
+
+    <script type="text/javascript" src="js/refjs/jquery-2.1.4.min.js"></script>
+
+</body>
+</html>

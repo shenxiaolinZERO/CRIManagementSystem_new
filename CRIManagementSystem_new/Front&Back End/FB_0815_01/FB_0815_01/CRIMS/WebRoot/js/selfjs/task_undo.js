@@ -1,0 +1,45 @@
+$(function(){
+	$('#table').datagrid({
+		width:1250,
+		iconCls:'icon-ok',
+		url:'',
+		title:'未完成任务列表 ',
+		iconCls:'icon-search',
+		
+		columns:[[
+		{
+			field:'ps_time',
+			title:'计划开始时间',
+			width:210
+		},
+		{
+			field:'pe_time',
+			title:'计划结束时间',
+			width:210
+		},
+		{
+			field:'u_id',
+			title:'巡检人员',
+			width:200
+		},
+		{
+			field:'r_post',
+			title:'巡检岗位',
+			width:210
+		},
+		{
+			field:'as_time',
+			title:'实际开始时间',
+			width:210
+		},
+		{
+			field:'ae_time',
+			title:'实际结束时间',
+			width:210
+		},
+		]],		
+		pagination:true,
+		pageSize:5,
+		pageList:[5,10,15]
+	});
+});
