@@ -1,0 +1,60 @@
+/**
+ * Created by Microsoft on 2016/8/12.
+ */
+$(function(){
+    $('#table1').datagrid({
+        width:1250,
+        iconCls:'icon-ok',
+        url:'',
+        title:'用户详情 ',
+        iconCls:'icon-search',
+
+        columns:[[
+            {
+                field:'u_id',
+                title:'用户编号',
+                width:100
+            },
+            {
+                field:'u_name',
+                title:'用户姓名',
+                width:100
+            },
+            {
+                field:'u_password',
+                title:'用户密码',
+                width:100
+            },
+
+            {
+                field:'u_age',
+                title:'用户年龄',
+                width:50
+            },
+            {
+                field:'u_sex',
+                title:'性别',
+                width:50
+            },
+            {
+                field:'u_createtime',
+                title:'创建时间',
+                width:100
+            },
+            {
+                field:'u_tel',
+                title:'电话',
+                width:100
+            },
+            {
+                field:'u_email',
+                title:'邮箱',
+                width:100
+            },
+
+        ]],
+        pagination:true,
+        pageSize:5,
+        pageList:[5,10,15]
+    });
+});

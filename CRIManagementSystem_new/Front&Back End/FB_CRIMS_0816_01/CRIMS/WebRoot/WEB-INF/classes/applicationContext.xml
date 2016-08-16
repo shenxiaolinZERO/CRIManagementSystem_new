@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+     xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"  
+     xmlns:context="http://www.springframework.org/schema/context"  
+     xsi:schemaLocation="   
+           http://www.springframework.org/schema/beans    
+           http://www.springframework.org/schema/beans/spring-beans-2.0.xsd 
+           http://www.springframework.org/schema/aop    
+           http://www.springframework.org/schema/aop/spring-aop-2.0.xsd   
+           http://www.springframework.org/schema/tx    
+           http://www.springframework.org/schema/tx/spring-tx-2.0.xsd   ">
+           
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="configLocation"
+			value="classpath:hibernate.cfg.xml">
+		</property>
+		</bean>
+		
+	<bean id="templates" class="org.springframework.orm.hibernate3.HibernateTemplate">
+	   <property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- bean的定义 -->
+	<bean id="test" class="com.crims.pojos.Test" scope="prototype"></bean>
+	<bean id="area" class="com.crims.pojos.TArea" scope="prototype"></bean>
+	<bean id="cabint" class="com.crims.pojos.TCabint" scope="prototype"></bean>
+	<bean id="computroom" class="com.crims.pojos.TComputroom" scope="prototype"></bean>
+	<bean id="device" class="com.crims.pojos.TDevice" scope="prototype"></bean>
+	<bean id="devicestate" class="com.crims.pojos.TDeviceState" scope="prototype"></bean>
+	<bean id="exceptiom" class="com.crims.pojos.TExceptiom" scope="prototype"></bean>
+	<bean id="function" class="com.crims.pojos.TFunction" scope="prototype"></bean>
+	<bean id="role" class="com.crims.pojos.TRole" scope="prototype"></bean>
+	<bean id="rolefunction" class="com.crims.pojos.TRoleFunction"
+		scope="prototype"></bean>
+	<bean id="task" class="com.crims.pojos.TTask" scope="prototype"></bean>
+	<bean id="user" class="com.crims.pojos.TUser" scope="prototype"></bean>
+	<bean id="userrole" class="com.crims.pojos.TUserRole" scope="prototype"></bean>
+		
+		<!-- bean的定义 -->
+	<!-- dao的定义 -->
+	<bean id="userdao" class="com.crims.daoImpl.UserDaoImpl">
+		<property name="template" ref="templates"></property></bean>
+	<bean id="computroomdao" class="com.crims.daoImpl.ComputRoomDaoImpl">
+		<property name="template" ref="templates"></property></bean>
+	<bean id="devicedao" class="com.crims.daoImpl.DeviceDaoImpl">
+		<property name="template" ref="templates"></property></bean>
+	<bean id="patroldao" class="com.crims.daoImpl.PatrolDaoImpl">
+		<property name="template" ref="templates"></property></bean>	
+	<bean id="taskdao" class="com.crims.daoImpl.TaskDaoImpl">
+		<property name="template" ref="templates"></property></bean>
+	<bean id="testdao" class="com.crims.daoImpl.TestDaoImpl">
+		<property name="template" ref="templates"></property></bean>
+	<bean id="cabintdao" class="com.crims.daoImpl.CabintDaoImpl">
+		<property name="template" ref="templates"></property></bean>
+	<!-- dao的定义 -->
+	
+		<!-- service的定义 -->
+	<bean id="users" class="com.crims.serviceImpl.UserServiceImpl">
+		<property name="userDao" ref="userdao"></property></bean>
+	<bean id="computrooms" class="com.crims.serviceImpl.ComputRoomServiceImpl">
+		<property name="computroomDao" ref="computroomdao"></property></bean>
+	<bean id="devices" class="com.crims.serviceImpl.DeviceServiceImpl">
+		<property name="deviceDao" ref="devicedao"></property></bean>			
+	<bean id="patrols" class="com.crims.serviceImpl.PatrolServiceImpl">
+		<property name="patrolDao" ref="patroldao"></property></bean>	
+	<bean id="tasks" class="com.crims.serviceImpl.TaskServiceImpl">
+		<property name="taskDao" ref="taskdao"></property></bean>
+	<bean id="tests" class="com.crims.serviceImpl.TestServiceImpl">
+		<property name="testDao" ref="testdao"></property></bean>
+	<bean id="cabints" class="com.crims.serviceImpl.CabintServiceImpl">
+		<property name="cabintDao" ref="cabintdao"></property></bean>			
+	<!-- service的定义 -->
+
+
+	<!-- action的定义 -->
+	<bean id="testAction" class="com.crims.actions.TestAction">
+		<property name="u" ref="user"></property>
+		<property name="us" ref="users"></property>
+		<property name="c" ref="cabint"></property>
+		<property name="cs" ref="cabints"></property>
+	</bean>
+	<bean id="userAction" class="com.crims.actions.UserAction">
+		<property name="u" ref="user"></property>
+		<property name="us" ref="users"></property>
+		<property name="r" ref="role"></property>
+		<property name="ur" ref="userrole"></property>
+	</bean>	
+	<bean id="computRoomAction" class="com.crims.actions.ComputRoomAction">
+		<property name="c" ref="computroom"></property>
+		<property name="crs" ref="computrooms"></property>
+	</bean>
+	<bean id="taskAction" class="com.crims.actions.TaskAction">
+		<property name="t" ref="task"></property>
+		<property name="ts" ref="tasks"></property>
+	</bean>    
+	<bean id="cabintAction" class="com.crims.actions.CabintAction">
+		<property name="tc" ref="cabint"></property>
+		<property name="cs" ref="cabints"></property>
+	</bean>   
+	<bean id="deviceAction" class="com.crims.actions.DeviceAciton">
+		<property name="d" ref="device"></property>
+		<property name="ds" ref="devices"></property>
+	</bean> 
+	<bean id="patrolAction" class="com.crims.actions.PatrolAction">
+		<property name="tds" ref="devicestate"></property>
+		<property name="te" ref="exceptiom"></property>
+		<property name="ps" ref="patrols"></property>
+	</bean> 
+	  
+	<!-- action的定义 -->
+	
+	
+	
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+		       <ref bean="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+		
+</beans>
