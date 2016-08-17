@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+	<package name="worker" namespace="/" extends="struts-default">
+		<action name="*TestAction" class="testAction" method="{1}">
+			<result name="success" type="dispatcher">
+				/success.jsp
+			</result>
+			<result name="false" type="dispatcher">/false.jsp</result>
+		</action>
+
+
+		<action name="*computRoomAction" class="computRoomAction2"
+			method="{1}">
+			<result name="success" type="dispatcher">
+				/success.jsp
+			</result>
+			<result name="findcr" type="dispatcher">
+				/security/compRoom/computerRoom_find.jsp
+			</result>
+			<result name="false" type="dispatcher">/false.jsp</result>
+		</action>
+
+
+		<action name="*UserAction" class="userAction" method="{1}">
+			<result name="success" type="dispatcher">
+				/success.jsp
+			</result>
+			<result name="mainpage" type="dispatcher">/security/MainPage.jsp</result>
+			<result name="false" type="dispatcher">/false.jsp</result>
+		</action>
+
+		<action name="*deviceAction" class="deviceAction" method="{1}">
+			<result name="success" type="dispatcher">
+				/success.jsp
+			</result>
+			<result name="false" type="dispatcher">/false.jsp</result>
+		</action>
+
+
+
+		<action name="*taskAction" class="taskAction" method="{1}">
+			<result name="success" type="dispatcher">
+				/success.jsp
+			</result>
+			<result name="false" type="dispatcher">/false.jsp</result>
+		</action>
+
+		<action name="*cabintAction" class="cabintAction" method="{1}">
+			<result name="success" type="dispatcher">
+				/success.jsp
+			</result>
+			<result name="findCabint" type="dispatcher">
+				/security/cabinet/cabinet_find.jsp
+			</result>
+			
+			<result name="false" type="dispatcher">/false.jsp</result>
+		</action>
+		
+		<action name="*patrolAction" class="patrolAction" method="{1}">
+			<result name="success" type="dispatcher">
+				/success.jsp
+			</result>
+			<result name="false" type="dispatcher">/false.jsp</result>
+		</action>
+	</package>
+
+</struts>    
